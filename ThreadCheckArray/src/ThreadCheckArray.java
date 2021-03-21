@@ -1,13 +1,12 @@
 import java.util.ArrayList;
 
-public class ThreadCheckArray implements Runnable 
+class ThreadCheckArray implements Runnable 
 {
 	private boolean flag;
 	private boolean [] winArray;
 	SharedData sd;
 	ArrayList<Integer> array;
 	int b;
-	
 	public ThreadCheckArray(SharedData sd) 
 	{
 		this.sd = sd;	
@@ -52,6 +51,7 @@ public class ThreadCheckArray implements Runnable
 		rec(n-1, b);
 	}
 
+	
 	public void run() {
 		if (array.size() != 1)
 			if (Thread.currentThread().getName().equals("thread1"))
