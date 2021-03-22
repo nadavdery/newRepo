@@ -23,7 +23,8 @@ class ThreadCheckArray implements Runnable
 	/**constructor
 	 * @param sd- Shared data class contain the array and parameter given by the user
 	 */
-	public ThreadCheckArray(SharedData sd) 
+	
+	public ThreadCheckArray( SharedData sd) 
 	{
 		this.sd = sd;	
 		synchronized (sd) 
@@ -35,8 +36,8 @@ class ThreadCheckArray implements Runnable
 	}
 	
 	/**Recursion function that sum an current value 
-	 * @param n-for size of array
-	 * @param b- the number we check and expected to find some number from array that equals to his value
+	 * @param n for size of array
+	 * @param b the number we check and expected to find some number from array that equals to his value
 	 */
 	void rec(int n, int b)
 	{

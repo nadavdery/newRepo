@@ -12,8 +12,8 @@ public class SharedData
 	private final int b;
 	
 	/**Contructor of the class
-	 * @param array2- array of Integers that if we adding some of them we might get the value of b
-	 * @param b- the number we check of adding one or more elements
+	 * @param array2  array of Integers that if we adding some of them we might get the value of b
+	 * @param b  the number we check of adding one or more elements
 	 */
 	public SharedData(ArrayList<Integer> array2, int b) {
 		
