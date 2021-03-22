@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+/**
+ * @author Nadav Dery
+ *
+ */
 public class SharedData 
 {
 	private ArrayList<Integer> array ;
@@ -7,9 +11,9 @@ public class SharedData
 	private boolean flag;
 	private final int b;
 	
-	/**
-	 * @param array2
-	 * @param b
+	/**Contructor of the class
+	 * @param array2- array of Integers that if we adding some of them we might get the value of b
+	 * @param b- the number we check of adding one or more elements
 	 */
 	public SharedData(ArrayList<Integer> array2, int b) {
 		

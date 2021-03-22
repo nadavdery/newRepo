@@ -1,5 +1,17 @@
 import java.util.ArrayList;
 
+/**ThreadCheckArray used 2 threads to check if we have some elements in array that their sum equals to the given number from user
+ * @author Nadav Dery
+ *@version 1.0.0
+ */
+/**
+ * @author נדב
+ *
+ */
+/**
+ * @author נדב
+ *
+ */
 class ThreadCheckArray implements Runnable 
 {
 	private boolean flag;
@@ -7,6 +19,10 @@ class ThreadCheckArray implements Runnable
 	SharedData sd;
 	ArrayList<Integer> array;
 	int b;
+	
+	/**constructor
+	 * @param sd- Shared data class contain the array and parameter given by the user
+	 */
 	public ThreadCheckArray(SharedData sd) 
 	{
 		this.sd = sd;	
@@ -18,6 +34,10 @@ class ThreadCheckArray implements Runnable
 		winArray = new boolean[array.size()];
 	}
 	
+	/**Recursion function that sum an current value 
+	 * @param n-for size of array
+	 * @param b- the number we check and expected to find some number from array that equals to his value
+	 */
 	void rec(int n, int b)
 	{
 		synchronized (sd) 
@@ -52,6 +72,9 @@ class ThreadCheckArray implements Runnable
 	}
 
 	
+	/**method from the Interface Runnable. the method run the threads
+	 *
+	 */
 	public void run() {
 		if (array.size() != 1)
 			if (Thread.currentThread().getName().equals("thread1"))
